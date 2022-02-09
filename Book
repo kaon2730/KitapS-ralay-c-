@@ -1,0 +1,46 @@
+package kitap;
+
+public class Book implements Comparable<Book> {
+	private String bookName;
+	private int totalPage;
+	private String writerName;
+	private int releaseDate;
+	public Book() {
+		
+	}
+	public Book(String bookName, int totalPage, String writerName, int releaseDate) {
+		this.bookName=bookName;
+		this.totalPage=totalPage;
+		this.writerName=writerName;
+		this.releaseDate=releaseDate;
+	}
+	@Override
+	public int compareTo(Book o) {
+		return this.bookName.compareTo(o.bookName);
+		
+	}
+	public String getBookName() {
+		return bookName;
+	}
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+	public int getTotalPage() {
+		return totalPage;
+	}
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
+	}
+	public String getWriterName() {
+		return writerName;
+	}
+	public void setWriterName(String writerName) {
+		this.writerName = writerName;
+	}
+	public int getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(int releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+}
